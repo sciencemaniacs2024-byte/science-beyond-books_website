@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Chapter 1: Matter in Our Surroundings – Science Beyond Books</title>
+  <meta name="description"
+    content="Learn about states of matter, evaporation, diffusion and more with examples and activities.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .states-demo {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1.5rem 0
+    }
+
+    .state-box {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .3s
+    }
+
+    .state-box:hover {
+      transform: translateY(-4px)
+    }
+
+    .state-box canvas {
+      display: block;
+      margin: 0 auto .75rem
+    }
+
+    .state-box h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: .25rem
+    }
+
+    .state-box p {
+      font-size: .72rem;
+      color: var(--text-muted)
+    }
+
+    .change-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: .75rem;
+      gap: 4px
+    }
+
+    .change-arrow span {
+      font-size: 1.4rem
+    }
+
+    .changes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .change-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center
+    }
+
+    .change-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: .5rem
+    }
+
+    .change-card h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: .3rem
+    }
+
+    .change-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.5
+    }
+
+    .prop-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+      margin: 1rem 0
+    }
+
+    .prop-table th {
+      background: var(--bg-card2);
+      color: var(--accent-blue);
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 2px solid rgba(79, 142, 247, .3)
+    }
+
+    .prop-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary)
+    }
+
+    .prop-table tr:hover td {
+      background: rgba(255, 255, 255, .02)
+    }
+
+    .evap-diagram {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1.5rem 0
+    }
+
+    .evap-box {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      width: 140px
+    }
+
+    .evap-box canvas {
+      display: block;
+      margin: 0 auto .5rem
+    }
+
+    .evap-box p {
+      font-size: .75rem;
+      color: var(--text-muted)
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">⚗️</div><span>Science Beyond Books</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chapter1.html" class="active">Matter</a></li>
+      <li><a href="chapter2.html">Pure Substances</a></li>
+      <li><a href="chapter3.html">Atoms &amp; Molecules</a></li>
+      <li><a href="chapter4.html">Atomic Structure</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+
+  <div class="page-hero" style="background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(79,142,247,.15),transparent)">
+    <div class="breadcrumb"><a href="index.html">Home</a> › <span>Chapter 1</span></div>
+    <div style="font-size:3rem;margin-bottom:.5rem">🧊</div>
+    <h1>Matter in Our <span class="highlight">Surroundings</span></h1>
+    <p>Understand what matter is, its three states, and how it changes from one form to another.</p>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:3rem 2rem">
+
+    <!-- WHAT IS MATTER -->
+    <div class="concept-block" style="--block-color:#4f8ef7">
+      <h3>🔍 What is Matter?</h3>
+      <p>Anything that has <strong>mass</strong> and <strong>occupies space</strong> is called matter. Look around —
+        your desk, water in a glass, the air you breathe — all are matter!</p>
+      <div class="definition-box">
+        <div class="def-label">📌 Definition</div>
+        <p>Matter is anything that has mass and takes up space (volume). It is made up of tiny particles called atoms
+          and molecules.</p>
+      </div>
+      <div class="example-box">
+        <div class="ex-label">✅ Examples</div>
+        <p>Book, water, oxygen gas, iron nail, salt — all are matter.<br>
+          Light, sound, heat — <strong>NOT</strong> matter (they have no mass or volume).</p>
+      </div>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Real Life</div>
+        <p>When you hold a balloon filled with air, you can feel it has weight — that's the mass of air (matter) inside
+          it!</p>
+      </div>
+    </div>
+
+    <!-- PARTICLE NATURE -->
+    <div class="concept-block" style="--block-color:#818cf8">
+      <h3>⚡ Particle Nature of Matter</h3>
+      <p>Matter is made of tiny particles that are too small to see with the naked eye. These particles have special
+        characteristics:</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">🔗</div>
+          <h4>Intermolecular Spaces</h4>
+          <p>Particles have spaces between them. Solids have least, gases have most.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔄</div>
+          <h4>Constant Motion</h4>
+          <p>Particles are always moving — vibrating in solids, freely in gases.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🧲</div>
+          <h4>Forces of Attraction</h3>
+            <p>Particles attract each other. Strongest in solids, weakest in gases.</p>
+        </div>
+      </div>
+      <div class="activity-box">
+        <div class="act-header"><span class="act-badge">Activity</span>
+          <h4>Dissolving Sugar in Water</h4>
+        </div>
+        <p style="color:var(--text-secondary);font-size:.875rem;margin-bottom:.75rem">See particles in action!</p>
+        <ol>
+          <li>Take a glass of water and add 2 spoons of sugar.</li>
+          <li>Stir gently until sugar dissolves completely.</li>
+          <li>Taste it — it's sweet throughout the glass!</li>
+        </ol>
+        <p style="color:var(--text-muted);font-size:.8rem;margin-top:.75rem">💡 <em>Why? Sugar particles moved into the
+            spaces between water particles — proving particles have spaces between them!</em></p>
+      </div>
+    </div>
+
+    <!-- THREE STATES -->
+    <div class="concept-block" style="--block-color:#22d3a5">
+      <h3>🧊 Three States of Matter</h3>
+      <p>Matter exists in three main states depending on the arrangement and movement of its particles:</p>
+      <div class="states-demo">
+        <div class="state-box" style="--state-color:#4f8ef7">
+          <canvas class="state-canvas" data-type="solid" width="90" height="90"></canvas>
+          <h4 style="color:#4f8ef7">Solid</h4>
+          <p>Fixed shape &amp; volume</p>
+        </div>
+        <div class="state-box" style="--state-color:#22d3a5">
+          <canvas class="state-canvas" data-type="liquid" width="90" height="90"></canvas>
+          <h4 style="color:#22d3a5">Liquid</h4>
+          <p>Fixed volume, no fixed shape</p>
+        </div>
+        <div class="state-box" style="--state-color:#a855f7">
+          <canvas class="state-canvas" data-type="gas" width="90" height="90"></canvas>
+          <h4 style="color:#a855f7">Gas</h4>
+          <p>No fixed shape or volume</p>
+        </div>
+      </div>
+      <table class="prop-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>🧊 Solid</th>
+            <th>💧 Liquid</th>
+            <th>💨 Gas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shape</td>
+            <td>Definite</td>
+            <td>Indefinite</td>
+            <td>Indefinite</td>
+          </tr>
+          <tr>
+            <td>Volume</td>
+            <td>Definite</td>
+            <td>Definite</td>
+            <td>Indefinite</td>
+          </tr>
+          <tr>
+            <td>Compressibility</td>
+            <td>Negligible</td>
+            <td>Low</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Fluidity</td>
+            <td>None</td>
+            <td>Can flow</td>
+            <td>Flows easily</td>
+          </tr>
+          <tr>
+            <td>Particle spacing</td>
+            <td>Very close</td>
+            <td>Close</td>
+            <td>Far apart</td>
+          </tr>
+          <tr>
+            <td>Particle movement</td>
+            <td>Vibrate only</td>
+            <td>Slide past each other</td>
+            <td>Move freely</td>
+          </tr>
+          <tr>
+            <td>Intermolecular force</td>
+            <td>Very strong</td>
+            <td>Moderate</td>
+            <td>Negligible</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Real Life Examples</div>
+        <p><strong>Solid:</strong> Ice, iron nail, wood<br>
+          <strong>Liquid:</strong> Water, milk, mercury<br>
+          <strong>Gas:</strong> Air, steam, LPG (cooking gas)
+        </p>
+      </div>
+    </div>
+
+    <!-- CHANGE OF STATE -->
+    <div class="concept-block" style="--block-color:#fb923c">
+      <h3>🔥 Change of State</h3>
+      <p>Matter changes from one state to another when heat is added or removed. These changes are caused by change in
+        temperature and pressure.</p>
+
+      <div class="diagram-container">
+        <h4>State Change Diagram</h4>
+        <svg viewBox="0 0 560 200" width="100%" style="max-width:560px">
+          <defs>
+            <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#4f8ef7" />
+            </marker>
+            <marker id="arrowL" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+              <path d="M8,0 L8,6 L0,3 z" fill="#22d3a5" />
+            </marker>
+            <marker id="arrowR2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#4f8ef7" />
+            </marker>
+            <marker id="arrowL2" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+              <path d="M8,0 L8,6 L0,3 z" fill="#22d3a5" />
+            </marker>
+          </defs>
+          <!-- Boxes -->
+          <rect x="10" y="75" width="110" height="50" rx="12" fill="rgba(79,142,247,.2)" stroke="#4f8ef7"
+            stroke-width="1.5" />
+          <text x="65" y="97" text-anchor="middle" fill="#4f8ef7" font-size="13" font-weight="700">SOLID</text>
+          <text x="65" y="113" text-anchor="middle" fill="#94a3b8" font-size="10">Ice, Iron</text>
+
+          <rect x="225" y="75" width="110" height="50" rx="12" fill="rgba(34,211,165,.2)" stroke="#22d3a5"
+            stroke-width="1.5" />
+          <text x="280" y="97" text-anchor="middle" fill="#22d3a5" font-size="13" font-weight="700">LIQUID</text>
+          <text x="280" y="113" text-anchor="middle" fill="#94a3b8" font-size="10">Water, Mercury</text>
+
+          <rect x="440" y="75" width="110" height="50" rx="12" fill="rgba(168,85,247,.2)" stroke="#a855f7"
+            stroke-width="1.5" />
+          <text x="495" y="97" text-anchor="middle" fill="#a855f7" font-size="13" font-weight="700">GAS</text>
+          <text x="495" y="113" text-anchor="middle" fill="#94a3b8" font-size="10">Steam, Air</text>
+
+          <!-- Solid to Liquid -->
+          <line x1="122" y1="93" x2="223" y2="93" stroke="#4f8ef7" stroke-width="1.5" marker-end="url(#arrowR)" />
+          <text x="172" y="85" text-anchor="middle" fill="#4f8ef7" font-size="10">Melting↑heat</text>
+          <!-- Liquid to Solid -->
+          <line x1="223" y1="107" x2="122" y2="107" stroke="#22d3a5" stroke-width="1.5" marker-end="url(#arrowL)" />
+          <text x="172" y="120" text-anchor="middle" fill="#22d3a5" font-size="10">Freezing↓heat</text>
+
+          <!-- Liquid to Gas -->
+          <line x1="337" y1="93" x2="438" y2="93" stroke="#4f8ef7" stroke-width="1.5" marker-end="url(#arrowR2)" />
+          <text x="387" y="85" text-anchor="middle" fill="#4f8ef7" font-size="10">Vaporisation↑heat</text>
+          <!-- Gas to Liquid -->
+          <line x1="438" y1="107" x2="337" y2="107" stroke="#22d3a5" stroke-width="1.5" marker-end="url(#arrowL2)" />
+          <text x="387" y="120" text-anchor="middle" fill="#22d3a5" font-size="10">Condensation↓heat</text>
+
+          <!-- Sublimation arc -->
+          <path d="M 65 75 Q 280 10 495 75" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,3" />
+          <text x="280" y="22" text-anchor="middle" fill="#fb923c" font-size="10">Sublimation (e.g. camphor, dry
+            ice)</text>
+
+          <!-- Deposition arc -->
+          <path d="M 495 125 Q 280 185 65 125" fill="none" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="5,3" />
+          <text x="280" y="198" text-anchor="middle" fill="#f472b6" font-size="10">Deposition</text>
+        </svg>
+        <p class="diagram-caption">Changes of state — add heat (blue) or remove heat (green)</p>
+      </div>
+
+      <div class="changes-grid">
+        <div class="change-card">
+          <div class="icon">🧊→💧</div>
+          <h4>Melting</h4>
+          <p>Solid → Liquid. Temperature at which it happens = Melting Point. (Ice melts at 0°C)</p>
+        </div>
+        <div class="change-card">
+          <div class="icon">💧→💨</div>
+          <h4>Vaporisation</h4>
+          <p>Liquid → Gas. At boiling point (100°C for water at 1 atm). Rapid process.</p>
+        </div>
+        <div class="change-card">
+          <div class="icon">💨→💧</div>
+          <h4>Condensation</h4>
+          <p>Gas → Liquid. Steam touching a cold surface turns to water droplets.</p>
+        </div>
+        <div class="change-card">
+          <div class="icon">💧→🧊</div>
+          <h4>Freezing</h4>
+          <p>Liquid → Solid. Water freezes at 0°C to become ice.</p>
+        </div>
+        <div class="change-card">
+          <div class="icon">🧊→💨</div>
+          <h4>Sublimation</h4>
+          <p>Solid → Gas directly. Camphor, dry ice, naphthalene balls sublime.</p>
+        </div>
+      </div>
+
+      <div class="definition-box">
+        <div class="def-label">📌 Latent Heat</div>
+        <p>The heat energy absorbed/released during a change of state <em>without any change in temperature</em> is
+          called Latent Heat. This is why ice at 0°C feels colder than water at 0°C — ice needs to absorb latent heat to
+          melt!</p>
+      </div>
+    </div>
+
+    <!-- EVAPORATION -->
+    <div class="concept-block" style="--block-color:#22d3a5">
+      <h3>💧 Evaporation</h3>
+      <p>Evaporation is the process by which a liquid converts into vapour <strong>below its boiling point</strong>, at
+        the surface of the liquid.</p>
+      <div class="definition-box">
+        <div class="def-label">📌 Key Concept</div>
+        <p>Only the faster-moving particles at the surface escape into the air. This is why evaporation is a <em>surface
+            phenomenon</em> and causes <em>cooling</em>.</p>
+      </div>
+      <h4 style="margin:1rem 0 .5rem;font-size:1rem">Factors Affecting Evaporation:</h4>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">🌡️</div>
+          <h4>Temperature ↑</h4>
+          <p>Higher temperature → more particles have energy → faster evaporation</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">💨</div>
+          <h4>Wind Speed ↑</h4>
+          <p>Wind carries away vapour → air above becomes unsaturated → faster evaporation</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">💦</div>
+          <h4>Humidity ↓</h4>
+          <p>Low humidity = less water vapour already in air → faster evaporation</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📐</div>
+          <h4>Surface Area ↑</h4>
+          <p>Larger surface → more particles exposed → faster evaporation</p>
+        </div>
+      </div>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Real Life</div>
+        <p>
+          🥵 <strong>Sweating cools us:</strong> Sweat evaporates from skin, taking away heat — we feel cool.<br>
+          👕 <strong>Wet clothes dry:</strong> Water evaporates from fabric surface.<br>
+          🏺 <strong>Earthen pots (matka):</strong> Water seeps through pores, evaporates, and cools the water
+          inside.<br>
+          🌊 <strong>Sea breeze:</strong> Evaporation from sea creates moisture in coastal air.
+        </p>
+      </div>
+      <div class="activity-box">
+        <div class="act-header"><span class="act-badge">Activity</span>
+          <h4>Feel Evaporation Cooling</h4>
+        </div>
+        <ol>
+          <li>Put a few drops of acetone (nail polish remover) on your palm.</li>
+          <li>Keep your palm still for a few seconds.</li>
+          <li>Notice the cooling sensation as it evaporates!</li>
+        </ol>
+        <p style="color:var(--text-muted);font-size:.8rem;margin-top:.75rem">💡 The acetone evaporates quickly,
+          absorbing heat from your skin — so you feel cold!</p>
+      </div>
+    </div>
+
+    <!-- DIFFUSION -->
+    <div class="concept-block" style="--block-color:#a855f7">
+      <h3>🌫️ Diffusion</h3>
+      <p>Diffusion is the spontaneous mixing of particles of two substances due to their random motion.</p>
+      <div class="definition-box">
+        <div class="def-label">📌 Definition</div>
+        <p>The process by which particles of two different substances intermix on their own due to kinetic energy is
+          called <strong>diffusion</strong>.</p>
+      </div>
+      <div class="key-points">
+        <h5>⭐ Key Points</h5>
+        <ul>
+          <li>Diffusion is fastest in gases, slower in liquids, slowest in solids</li>
+          <li>Rate of diffusion increases with temperature</li>
+          <li>Diffusion occurs from high concentration → low concentration</li>
+          <li>No external energy is needed</li>
+        </ul>
+      </div>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Real Life</div>
+        <p>
+          🌹 <strong>Fragrance of flowers/perfume</strong> spreading across a room — diffusion of gases<br>
+          🍵 <strong>Tea colour spreading</strong> in hot water without stirring — diffusion in liquids<br>
+          🪴 <strong>Water absorption by roots</strong> — diffusion in semi-solids<br>
+          🏭 <strong>Smoke rising from chimneys</strong> diffuses into the atmosphere
+        </p>
+      </div>
+      <div class="activity-box">
+        <div class="act-header"><span class="act-badge">Activity</span>
+          <h4>Diffusion in Liquids</h4>
+        </div>
+        <ol>
+          <li>Fill a glass with still water.</li>
+          <li>Carefully drop one crystal of potassium permanganate (purple) at the bottom.</li>
+          <li>Do NOT stir. Observe over 10–15 minutes.</li>
+          <li>The purple colour slowly spreads upward — diffusion!</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="quiz-section">
+      <h3>🧠 Quick Quiz — Chapter 1</h3>
+
+      <div class="quiz-q">
+        <div class="q-text">1. Which state of matter has a definite shape and definite volume?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-correct="true">Solid</button>
+          <button class="quiz-opt">Liquid</button>
+          <button class="quiz-opt">Gas</button>
+          <button class="quiz-opt">Plasma</button>
+        </div>
+        <div class="quiz-feedback">✅ Correct! Solids have both definite shape and volume because particles are tightly
+          packed with strong intermolecular forces.</div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-text">2. Why does evaporation cause cooling?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">It adds water to skin</button>
+          <button class="quiz-opt" data-correct="true">Particles absorb heat from surroundings to evaporate</button>
+          <button class="quiz-opt">It increases temperature</button>
+          <button class="quiz-opt">It creates pressure</button>
+        </div>
+        <div class="quiz-feedback">✅ Evaporating particles take energy (heat) from the surroundings — so the surface
+          left behind feels cool. This is called evaporative cooling.</div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-text">3. Camphor disappears without forming a liquid. This process is called:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">Condensation</button>
+          <button class="quiz-opt">Evaporation</button>
+          <button class="quiz-opt" data-correct="true">Sublimation</button>
+          <button class="quiz-opt">Melting</button>
+        </div>
+        <div class="quiz-feedback">✅ Sublimation is the direct change from solid to gas without passing through the
+          liquid state. Camphor, naphthalene balls and dry ice are classic examples.</div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-text">4. In which medium is diffusion fastest?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">Solid</button>
+          <button class="quiz-opt">Liquid</button>
+          <button class="quiz-opt" data-correct="true">Gas</button>
+          <button class="quiz-opt">Same in all</button>
+        </div>
+        <div class="quiz-feedback">✅ Gases have maximum intermolecular spaces and fastest-moving particles, so diffusion
+          is most rapid in gases.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap;margin-top:2rem">
+      <a href="index.html" class="btn-secondary">← Home</a>
+      <a href="chapter2.html" class="btn-primary">Chapter 2: Pure Substances →</a>
+    </div>
+
+  </div><!-- end chapter-content -->
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="chapter1.html">Chapter 1</a><a href="chapter2.html">Chapter 2</a><a
+        href="chapter3.html">Chapter 3</a><a href="chapter4.html">Chapter 4</a>
+    </div>
+    <p>© 2025 Science Beyond Books· NCERT Class 9 Chemistry · Made with ❤️ for students</p>
+    <p>It is a non-profit work</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => { const s = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100; const f = document.querySelector('.progress-fill'); if (f) f.style.width = s + '%'; });
+    const hb = document.querySelector('.hamburger'), nl = document.querySelector('.nav-links');
+    if (hb) hb.addEventListener('click', () => nl.classList.toggle('open'));
+
+    document.querySelectorAll('.quiz-opt').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const q = this.closest('.quiz-q'); if (q.dataset.answered) return; q.dataset.answered = true;
+        const ok = this.dataset.correct === 'true';
+        this.classList.add(ok ? 'correct' : 'wrong');
+        if (!ok) q.querySelector('[data-correct="true"]').classList.add('correct');
+        const fb = q.querySelector('.quiz-feedback'); if (fb) fb.classList.add('show');
+      });
+    });
+
+    function drawParticles(canvas, type) {
+      const ctx = canvas.getContext('2d'), w = canvas.width, h = canvas.height;
+      const count = type === 'solid' ? 16 : type === 'liquid' ? 14 : 8;
+      const color = type === 'solid' ? '#4f8ef7' : type === 'liquid' ? '#22d3a5' : '#a855f7';
+      const speed = type === 'solid' ? .3 : type === 'liquid' ? 1.2 : 2.5;
+      const ps = [];
+      for (let i = 0; i < count; i++) {
+        const col = i % 4, row = Math.floor(i / 4);
+        ps.push({
+          x: type === 'solid' ? 12 + col * 22 : Math.random() * (w - 10) + 5, y: type === 'solid' ? 12 + row * 22 : Math.random() * (h - 10) + 5,
+          ox: 12 + col * 22, oy: 12 + row * 22, vx: (Math.random() - .5) * speed, vy: (Math.random() - .5) * speed, r: type === 'gas' ? 3 : 4
+        });
+      }
+      function anim() {
+        ctx.clearRect(0, 0, w, h);
+        ps.forEach(p => {
+          if (type === 'solid') { p.x += (p.ox - p.x) * .1 + (Math.random() - .5) * .4; p.y += (p.oy - p.y) * .1 + (Math.random() - .5) * .4; }
+          else {
+            p.x += p.vx; p.y += p.vy; if (p.x < p.r || p.x > w - p.r) p.vx *= -1; if (p.y < p.r || p.y > h - p.r) p.vy *= -1;
+            if (type === 'liquid' && p.y < h * .3) { p.vy = Math.abs(p.vy); }
+          }
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = color; ctx.shadowColor = color; ctx.shadowBlur = 6; ctx.fill();
+        }); requestAnimationFrame(anim);
+      } anim();
+    }
+    document.querySelectorAll('.state-canvas').forEach(c => drawParticles(c, c.dataset.type));
+  </script>
+</body>
+
+</html>

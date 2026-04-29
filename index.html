@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Beyond Books – Class 9 Chemistry NCERT</title>
+    <meta name="description"
+        content="Interactive Class 9 NCERT Chemistry – concepts, examples, diagrams and activities for every chapter.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem
+        }
+
+        .stat-item {
+            text-align: center
+        }
+
+        .stat-item .num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        .stat-item .lbl {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: 2px
+        }
+
+        .ch1 {
+            --card-gradient: linear-gradient(90deg, #4f8ef7, #818cf8)
+        }
+
+        .ch2 {
+            --card-gradient: linear-gradient(90deg, #22d3a5, #4f8ef7)
+        }
+
+        .ch3 {
+            --card-gradient: linear-gradient(90deg, #a855f7, #f472b6)
+        }
+
+        .ch4 {
+            --card-gradient: linear-gradient(90deg, #fb923c, #f59e0b)
+        }
+
+        .ch1 .chapter-icon {
+            background: rgba(163, 79, 247, 0.485)
+        }
+
+        .ch2 .chapter-icon {
+            background: rgba(34, 211, 164, 0.304)
+        }
+
+        .ch3 .chapter-icon {
+            background: rgba(240, 206, 111, 0.914)
+        }
+
+        .ch4 .chapter-icon {
+            background: rgba(251, 146, 60, 0.15)
+        }
+
+        .feature-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border)
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
+
+        .feature-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 3px
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            line-height: 1.5
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">⚗️</div>
+            <span>Science Beyond Books</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chapter1.html">Matter</a></li>
+            <li><a href="chapter2.html">Pure Substances</a></li>
+            <li><a href="chapter3.html">Atoms &amp; Molecules</a></li>
+            <li><a href="chapter4.html">Atomic Structure</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content fade-in">
+            <div class="hero-badge">⚗️ &nbsp; NCERT Class 9 · Chemistry</div>
+            <h1>Chemistry Made<br><span class="gradient-text">Simple & Fun</span></h1>
+            <p>Explore all four Class 9 Chemistry chapters with crystal-clear concepts, real-life examples, interactive
+                diagrams, and hands-on activities — designed to make you fall in love with science.</p>
+            <div class="hero-buttons">
+                <a href="chapter1.html" class="btn-primary">🚀 Start Learning</a>
+                <a href="#chapters" class="btn-secondary">📚 Browse Chapters</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="num">4</div>
+                    <div class="lbl">Chapters</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">40+</div>
+                    <div class="lbl">Concepts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">20+</div>
+                    <div class="lbl">Activities</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">50+</div>
+                    <div class="lbl">Daily Life Examples</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTERS -->
+    <section id="chapters" style="padding:80px 2rem;max-width:1100px;margin:0 auto;">
+        <div class="section-header">
+            <div class="label">📖 NCERT Curriculum</div>
+            <h2>All Chemistry Chapters</h2>
+            <p>Click any chapter to dive deep into concepts, diagrams, examples and quizzes</p>
+        </div>
+        <div class="chapters-grid">
+            <a href="chapter1.html" class="chapter-card ch1">
+                <div class="chapter-icon">🧊</div>
+                <h3>Chapter 1: Matter in Our Surroundings</h3>
+                <p>Solid, liquid, gas — how matter changes state, evaporation, diffusion, and the effect of temperature
+                    and pressure.</p>
+                <div class="chapter-meta">
+                    <span class="meta-tag" style="color:#4f8ef7;border-color:rgba(79,142,247,0.3)">States of
+                        Matter</span>
+                    <span class="meta-tag" style="color:#818cf8;border-color:rgba(129,140,248,0.3)">Diffusion</span>
+                    <span class="meta-tag" style="color:#4f8ef7;border-color:rgba(79,142,247,0.3)">Evaporation</span>
+                </div>
+            </a>
+            <a href="chapter2.html" class="chapter-card ch2">
+                <div class="chapter-icon">🧪</div>
+                <h3>Chapter 2: Is Matter Around Us Pure?</h3>
+                <p>Elements, compounds, mixtures, solutions, colloids, and suspension — types of matter and separation
+                    techniques.</p>
+                <div class="chapter-meta">
+                    <span class="meta-tag" style="color:#22d3a5;border-color:rgba(69, 211, 34, 0.253)">Mixtures</span>
+                    <span class="meta-tag" style="color:#4f8ef7;border-color:rgba(247, 79, 141, 0.3)">Solutions</span>
+                    <span class="meta-tag" style="color:#22d3a5;border-color:rgba(34,211,165,0.3)">Colloids</span>
+                </div>
+            </a>
+            <a href="chapter3.html" class="chapter-card ch3">
+                <div class="chapter-icon">⚛️</div>
+                <h3>Chapter 3: Atoms and Molecules</h3>
+                <p>Dalton's atomic theory, laws of chemical combination, atomic mass, molecular mass, and the mole
+                    concept.</p>
+                <div class="chapter-meta">
+                    <span class="meta-tag" style="color:#a855f7;border-color:rgba(168,85,247,0.3)">Atoms</span>
+                    <span class="meta-tag" style="color:#f472b6;border-color:rgba(244,114,182,0.3)">Molecules</span>
+                    <span class="meta-tag" style="color:#55f76b;border-color:rgba(168,85,247,0.3)">Mole Concept</span>
+                </div>
+            </a>
+            <a href="chapter4.html" class="chapter-card ch4">
+                <div class="chapter-icon">🔬</div>
+                <h3>Chapter 4: Structure of the Atom</h3>
+                <p>Discovery of electrons, protons and neutrons, Bohr's model, atomic number, mass number, isotopes and
+                    isobars.</p>
+                <div class="chapter-meta">
+                    <span class="meta-tag" style="color:#fb923c;border-color:rgba(251,146,60,0.3)">Electrons</span>
+                    <span class="meta-tag" style="color:#f59e0b;border-color:rgba(245,158,11,0.3)">Bohr Model</span>
+                    <span class="meta-tag" style="color:#fb923c;border-color:rgba(251,146,60,0.3)">Isotopes</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="feature-strip">
+            <div class="feature-item">
+                <div class="feature-icon">💡</div>
+                <div>
+                    <h4>Concept First</h4>
+                    <p>Every topic explained from basics with step-by-step clarity</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🌍</div>
+                <div>
+                    <h4>Real-Life Links</h4>
+                    <p>See how chemistry explains everyday phenomena around you</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🧫</div>
+                <div>
+                    <h4>Activities</h4>
+                    <p>Hands-on experiments you can try at home or in the lab</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🧠</div>
+                <div>
+                    <h4>Quick Quizzes</h4>
+                    <p>Test your understanding after each topic with instant feedback</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <div>
+                    <h4>Visual Diagrams</h4>
+                    <p>Animated and illustrated diagrams for better retention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="chapter1.html">Chapter 1</a>
+            <a href="chapter2.html">Chapter 2</a>
+            <a href="chapter3.html">Chapter 3</a>
+            <a href="chapter4.html">Chapter 4</a>
+        </div>
+        <p>© 2025 Science Beyond Books · NCERT Class 9 Chemistry · Made with ❤️ for students</p>
+        <p>It is a non-profit work</p>
+    </footer>
+
+    <script>
+        // Particles
+        const pc = document.getElementById('particles');
+        if (pc) { for (let i = 0; i < 18; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;animation-delay:${Math.random() * 8}s;animation-duration:${6 + Math.random() * 6}s;background:${['#4f8ef7', '#a855f7', '#22d3a5', '#fb923c'][Math.floor(Math.random() * 4)]}`; pc.appendChild(p); } }
+
+        // Scroll progress
+        window.addEventListener('scroll', () => { const s = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100; const f = document.querySelector('.progress-fill'); if (f) f.style.width = s + '%'; });
+
+        // Hamburger
+        const hb = document.querySelector('.hamburger'), nl = document.querySelector('.nav-links');
+        if (hb) hb.addEventListener('click', () => nl.classList.toggle('open'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Chapter 3: Atoms and Molecules – Science Beyond Books</title>
+  <meta name="description"
+    content="Dalton's atomic theory, laws of chemical combination, atomic mass, molecular mass and mole concept – Class 9 NCERT.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .law-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent-blue);
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin-bottom: 1rem
+    }
+
+    .law-card h4 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: .4rem
+    }
+
+    .law-card p {
+      color: var(--text-secondary);
+      font-size: .875rem;
+      line-height: 1.6
+    }
+
+    .law-card .law-eg {
+      color: var(--text-muted);
+      font-size: .8rem;
+      margin-top: .4rem;
+      padding-top: .4rem;
+      border-top: 1px solid var(--border)
+    }
+
+    .symbol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: .6rem;
+      margin: 1rem 0
+    }
+
+    .sym-cell {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .6rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .sym-cell:hover {
+      border-color: var(--accent-blue);
+      transform: translateY(-2px)
+    }
+
+    .sym-cell .sym {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      font-family: 'Poppins', sans-serif
+    }
+
+    .sym-cell .name {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-top: 2px
+    }
+
+    .sym-cell .mass {
+      font-size: .65rem;
+      color: var(--text-secondary);
+      margin-top: 1px
+    }
+
+    .molecule-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center
+    }
+
+    .molecule-card .formula {
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      color: var(--accent-purple)
+    }
+
+    .molecule-card .mname {
+      font-size: .8rem;
+      color: var(--text-secondary);
+      margin-top: .2rem
+    }
+
+    .molecule-card .mmass {
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-top: .2rem
+    }
+
+    .mole-visual {
+      background: linear-gradient(135deg, rgba(168, 85, 247, .1), rgba(79, 142, 247, .1));
+      border: 1px solid rgba(168, 85, 247, .3);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin: 1.5rem 0
+    }
+
+    .mole-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .mole-label {
+      color: var(--text-secondary);
+      font-size: .9rem;
+      margin-top: .3rem
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">⚗️</div><span>Science Beyond Books</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chapter1.html">Matter</a></li>
+      <li><a href="chapter2.html">Pure Substances</a></li>
+      <li><a href="chapter3.html" class="active">Atoms &amp; Molecules</a></li>
+      <li><a href="chapter4.html">Atomic Structure</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+
+  <div class="page-hero" style="background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(168,85,247,.15),transparent)">
+    <div class="breadcrumb"><a href="index.html">Home</a> › <span>Chapter 3</span></div>
+    <div style="font-size:3rem;margin-bottom:.5rem">⚛️</div>
+    <h1>Atoms and <span class="highlight">Molecules</span></h1>
+    <p>From Dalton's theory to the mole concept — understand the building blocks of all matter.</p>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:3rem 2rem">
+
+    <!-- DALTON'S THEORY -->
+    <div class="concept-block" style="--block-color:#a855f7">
+      <h3>🔭 Dalton's Atomic Theory (1808)</h3>
+      <p>John Dalton proposed that all matter is made of indivisible particles called atoms. His theory formed the
+        foundation of modern chemistry.</p>
+      <div class="key-points">
+        <h5>⭐ Postulates of Dalton's Atomic Theory</h5>
+        <ul>
+          <li>All matter is made of very small particles called <strong>atoms</strong></li>
+          <li>Atoms cannot be created, divided or destroyed (during chemical reactions)</li>
+          <li>All atoms of the same element are identical in mass and properties</li>
+          <li>Atoms of different elements have different masses and properties</li>
+          <li>Atoms combine in small whole-number ratios to form <strong>compounds</strong></li>
+          <li>The relative number and kinds of atoms are constant in a given compound</li>
+        </ul>
+      </div>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Why This Matters</div>
+        <p>Dalton's theory explained why water is always H₂O — never H₃O or HO. Atoms always combine in fixed ratios,
+          which is why every substance has a definite formula!</p>
+      </div>
+      <div class="example-box">
+        <div class="ex-label">⚠️ Modern Modifications</div>
+        <p>We now know atoms CAN be divided (into protons, neutrons, electrons). Atoms of the same element can have
+          different masses (isotopes). But Dalton's core ideas remain valid for explaining chemical reactions.</p>
+      </div>
+    </div>
+
+    <!-- LAWS OF COMBINATION -->
+    <div class="concept-block" style="--block-color:#4f8ef7">
+      <h3>⚖️ Laws of Chemical Combination</h3>
+
+      <div class="law-card">
+        <h4>Law 1: Law of Conservation of Mass (Lavoisier, 1789)</h4>
+        <p>Mass can neither be created nor destroyed in a chemical reaction. Total mass of reactants = Total mass of
+          products.</p>
+        <div class="law-eg">🧪 Example: If 20g hydrogen + 160g oxygen react → exactly 180g water forms. Nothing is lost!
+        </div>
+      </div>
+
+      <div class="law-card">
+        <h4>Law 2: Law of Constant Proportions (Proust, 1799)</h4>
+        <p>In a chemical compound, elements are always present in <strong>fixed ratio by mass</strong>, regardless of
+          source or method of preparation.</p>
+        <div class="law-eg">🧪 Example: Water always contains H and O in ratio 1:8 by mass. Whether from tap, rain or
+          ocean — always the same!</div>
+      </div>
+
+      <div class="activity-box">
+        <div class="act-header"><span class="act-badge">Think About It</span>
+          <h4>Law of Conservation — A Burning Candle</h4>
+        </div>
+        <p style="color:var(--text-secondary);font-size:.875rem;margin-bottom:.75rem">When a candle burns, it seems to
+          disappear — but where does the mass go?</p>
+        <ol>
+          <li>Weigh a candle and place it under a sealed glass jar on a balance.</li>
+          <li>Light it and let it burn for 5 minutes (sealed, so gases stay inside).</li>
+          <li>Weigh again — the total mass stays the same!</li>
+        </ol>
+        <p style="color:var(--text-muted);font-size:.8rem;margin-top:.75rem">💡 The wax converted to CO₂ and H₂O gases —
+          mass didn't disappear, it changed form!</p>
+      </div>
+    </div>
+
+    <!-- ATOMS -->
+    <div class="concept-block" style="--block-color:#22d3a5">
+      <h3>⚪ What is an Atom?</h3>
+      <div class="definition-box">
+        <div class="def-label">📌 Atom</div>
+        <p>The smallest particle of an element that can take part in a chemical reaction. Atoms are extremely tiny —
+          about 10⁻¹⁰ metres in size.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <p style="color:var(--text-secondary);font-size:.875rem;line-height:1.7">Each element has its own chemical
+            <strong>symbol</strong> — a shorthand of 1 or 2 letters. Most symbols come from the element's English or
+            Latin name.
+          </p>
+          <div class="example-box">
+            <div class="ex-label">✅ Symbol Origins</div>
+            <p>Na = Natrium (Sodium in Latin)<br>K = Kalium (Potassium in Latin)<br>Fe = Ferrum (Iron in Latin)<br>Au =
+              Aurum (Gold in Latin)<br>O = Oxygen (English)</p>
+          </div>
+        </div>
+        <div>
+          <div class="definition-box">
+            <div class="def-label">📌 Atomic Mass</div>
+            <p>The mass of one atom of an element compared to 1/12th the mass of a Carbon-12 atom. Measured in
+              <strong>atomic mass units (u or amu)</strong>.
+            </p>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:.5rem">1 u = 1.66 × 10⁻²⁴ grams — impossibly
+            small!</p>
+        </div>
+      </div>
+
+      <h4 style="margin:1.2rem 0 .75rem">Common Elements — Symbols and Atomic Masses</h4>
+      <div class="symbol-grid">
+        <div class="sym-cell">
+          <div class="sym">H</div>
+          <div class="name">Hydrogen</div>
+          <div class="mass">1 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">He</div>
+          <div class="name">Helium</div>
+          <div class="mass">4 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">C</div>
+          <div class="name">Carbon</div>
+          <div class="mass">12 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">N</div>
+          <div class="name">Nitrogen</div>
+          <div class="mass">14 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">O</div>
+          <div class="name">Oxygen</div>
+          <div class="mass">16 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Na</div>
+          <div class="name">Sodium</div>
+          <div class="mass">23 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Mg</div>
+          <div class="name">Magnesium</div>
+          <div class="mass">24 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Al</div>
+          <div class="name">Aluminium</div>
+          <div class="mass">27 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">S</div>
+          <div class="name">Sulfur</div>
+          <div class="mass">32 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Cl</div>
+          <div class="name">Chlorine</div>
+          <div class="mass">35.5 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">K</div>
+          <div class="name">Potassium</div>
+          <div class="mass">39 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Ca</div>
+          <div class="name">Calcium</div>
+          <div class="mass">40 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Fe</div>
+          <div class="name">Iron</div>
+          <div class="mass">56 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Cu</div>
+          <div class="name">Copper</div>
+          <div class="mass">63.5 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Zn</div>
+          <div class="name">Zinc</div>
+          <div class="mass">65 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Ag</div>
+          <div class="name">Silver</div>
+          <div class="mass">108 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Au</div>
+          <div class="name">Gold</div>
+          <div class="mass">197 u</div>
+        </div>
+        <div class="sym-cell">
+          <div class="sym">Pb</div>
+          <div class="name">Lead</div>
+          <div class="mass">207 u</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLECULES -->
+    <div class="concept-block" style="--block-color:#f472b6">
+      <h3>🔗 Molecules and Chemical Formulae</h3>
+      <div class="definition-box">
+        <div class="def-label">📌 Molecule</div>
+        <p>The smallest particle of an element or compound that can exist independently and has all the properties of
+          that substance. Formed by combination of two or more atoms.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h4 style="color:var(--accent-pink);margin-bottom:.75rem">Molecules of Elements</h4>
+          <table class="chem-table">
+            <thead>
+              <tr>
+                <th>Molecule</th>
+                <th>Formula</th>
+                <th>Atoms</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hydrogen</td>
+                <td>H₂</td>
+                <td>2 H atoms</td>
+              </tr>
+              <tr>
+                <td>Oxygen</td>
+                <td>O₂</td>
+                <td>2 O atoms</td>
+              </tr>
+              <tr>
+                <td>Nitrogen</td>
+                <td>N₂</td>
+                <td>2 N atoms</td>
+              </tr>
+              <tr>
+                <td>Ozone</td>
+                <td>O₃</td>
+                <td>3 O atoms</td>
+              </tr>
+              <tr>
+                <td>Phosphorus</td>
+                <td>P₄</td>
+                <td>4 P atoms</td>
+              </tr>
+              <tr>
+                <td>Sulfur</td>
+                <td>S₈</td>
+                <td>8 S atoms</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4 style="color:var(--accent-purple);margin-bottom:.75rem">Molecules of Compounds</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
+            <div class="molecule-card">
+              <div class="formula">H₂O</div>
+              <div class="mname">Water</div>
+              <div class="mmass">18 u</div>
+            </div>
+            <div class="molecule-card">
+              <div class="formula">CO₂</div>
+              <div class="mname">Carbon Dioxide</div>
+              <div class="mmass">44 u</div>
+            </div>
+            <div class="molecule-card">
+              <div class="formula">NH₃</div>
+              <div class="mname">Ammonia</div>
+              <div class="mmass">17 u</div>
+            </div>
+            <div class="molecule-card">
+              <div class="formula">HCl</div>
+              <div class="mname">Hydrochloric Acid</div>
+              <div class="mmass">36.5 u</div>
+            </div>
+            <div class="molecule-card">
+              <div class="formula">NaCl</div>
+              <div class="mname">Common Salt</div>
+              <div class="mmass">58.5 u</div>
+            </div>
+            <div class="molecule-card">
+              <div class="formula">H₂SO₄</div>
+              <div class="mname">Sulphuric Acid</div>
+              <div class="mmass">98 u</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="margin:1.5rem 0 .75rem">📐 Calculating Molecular Mass</h4>
+      <div class="definition-box">
+        <div class="def-label">📌 Molecular Mass</div>
+        <p>Sum of the atomic masses of all atoms in one molecule of the substance.</p>
+      </div>
+      <div class="example-box">
+        <div class="ex-label">✅ Worked Example — Water (H₂O)</div>
+        <p>H₂O contains 2 hydrogen atoms and 1 oxygen atom.<br>
+          Atomic mass of H = 1 u, O = 16 u<br>
+          <strong>Molecular mass of H₂O = 2(1) + 1(16) = 2 + 16 = 18 u</strong>
+        </p>
+      </div>
+      <div class="example-box">
+        <div class="ex-label">✅ Worked Example — Sulphuric Acid (H₂SO₄)</div>
+        <p>H₂SO₄ = 2H + 1S + 4O<br>
+          = 2(1) + 1(32) + 4(16) = 2 + 32 + 64 = <strong>98 u</strong></p>
+      </div>
+    </div>
+
+    <!-- VALENCY & FORMULAE -->
+    <div class="concept-block" style="--block-color:#fb923c">
+      <h3>🔢 Valency and Writing Formulae</h3>
+      <div class="definition-box">
+        <div class="def-label">📌 Valency</div>
+        <p>The combining capacity of an atom — how many bonds it can form. Determined by the number of electrons in the
+          outermost shell that participate in bonding.</p>
+      </div>
+      <table class="chem-table">
+        <thead>
+          <tr>
+            <th>Element/Group</th>
+            <th>Symbol</th>
+            <th>Valency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hydrogen</td>
+            <td>H</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Oxygen</td>
+            <td>O</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Nitrogen</td>
+            <td>N</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Carbon</td>
+            <td>C</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Sodium</td>
+            <td>Na⁺</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Calcium</td>
+            <td>Ca²⁺</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Aluminium</td>
+            <td>Al³⁺</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Chloride</td>
+            <td>Cl⁻</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Sulphate</td>
+            <td>SO₄²⁻</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Nitrate</td>
+            <td>NO₃⁻</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="key-points">
+        <h5>⭐ Criss-Cross Method for Writing Formulae</h5>
+        <ul>
+          <li>Write the symbols of the two combining elements/ions</li>
+          <li>Write their valencies on top of each symbol</li>
+          <li>Criss-cross the valencies as subscripts</li>
+          <li>Reduce to the simplest whole-number ratio if needed</li>
+        </ul>
+      </div>
+      <div class="example-box">
+        <div class="ex-label">✅ Example: Aluminium Oxide</div>
+        <p>Al (valency 3) + O (valency 2)<br>
+          Criss-cross: Al₂O₃<br>
+          <strong>Formula: Al₂O₃</strong> (aluminium oxide)
+        </p>
+      </div>
+    </div>
+
+    <!-- MOLE CONCEPT -->
+    <div class="concept-block" style="--block-color:#22d3a5">
+      <h3>🔢 The Mole Concept</h3>
+      <p>Atoms are incredibly tiny. We need a convenient unit to count them in bulk — that unit is the
+        <strong>mole</strong>.
+      </p>
+      <div class="mole-visual">
+        <div class="mole-num">6.022 × 10²³</div>
+        <div class="mole-label">= 1 Mole = Avogadro's Number (Nₐ)</div>
+        <p style="color:var(--text-muted);font-size:.82rem;margin-top:.75rem">This is the number of atoms in exactly 12
+          grams of Carbon-12</p>
+      </div>
+      <div class="definition-box">
+        <div class="def-label">📌 Mole</div>
+        <p>One mole of any substance contains <strong>6.022 × 10²³</strong> particles (atoms, molecules, or ions). The
+          mass of one mole is its <em>molar mass</em> in grams.</p>
+      </div>
+      <div class="formula-box">Molar Mass = Molecular Mass expressed in grams/mol</div>
+      <div class="example-box">
+        <div class="ex-label">✅ Examples</div>
+        <p>
+          1 mole of C = 12 g, contains 6.022×10²³ carbon atoms<br>
+          1 mole of H₂O = 18 g, contains 6.022×10²³ water molecules<br>
+          1 mole of NaCl = 58.5 g, contains 6.022×10²³ NaCl units
+        </p>
+      </div>
+      <div class="formula-box">Number of moles = Given mass (g) ÷ Molar mass (g/mol)</div>
+      <div class="formula-box">Number of particles = Moles × 6.022 × 10²³</div>
+      <div class="reallife-box">
+        <div class="rl-label">🌍 Why the Mole?</div>
+        <p>One atom of hydrogen weighs 1.67 × 10⁻²⁴ g — impossible to weigh! But 1 mole of hydrogen (6 × 10²³ atoms)
+          weighs exactly 1 gram — measurable in a lab. The mole bridges the atomic world and our lab world!</p>
+      </div>
+      <div class="activity-box">
+        <div class="act-header"><span class="act-badge">Solve It</span>
+          <h4>Mole Calculation Practice</h4>
+        </div>
+        <p style="color:var(--text-secondary);font-size:.875rem;margin-bottom:.75rem">Try these problems:</p>
+        <ol>
+          <li>How many moles are in 36 g of water (H₂O)? <em style="color:var(--text-muted)">[Ans: 2 moles]</em></li>
+          <li>What is the mass of 3 moles of CO₂? <em style="color:var(--text-muted)">[Ans: 132 g]</em></li>
+          <li>How many molecules are in 0.5 mole of O₂? <em style="color:var(--text-muted)">[Ans: 3.011×10²³]</em></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="quiz-section">
+      <h3>🧠 Quick Quiz — Chapter 3</h3>
+      <div class="quiz-q">
+        <div class="q-text">1. According to the Law of Conservation of Mass, what happens to mass during a chemical
+          reaction?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">Mass increases</button>
+          <button class="quiz-opt">Mass decreases</button>
+          <button class="quiz-opt" data-correct="true">Mass remains constant</button>
+          <button class="quiz-opt">Mass may change</button>
+        </div>
+        <div class="quiz-feedback">✅ Lavoisier's Law: mass of reactants = mass of products. Atoms are only rearranged,
+          never created or destroyed.</div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-text">2. What is the molecular mass of CO₂? (C = 12, O = 16)</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">28 u</button>
+          <button class="quiz-opt" data-correct="true">44 u</button>
+          <button class="quiz-opt">32 u</button>
+          <button class="quiz-opt">40 u</button>
+        </div>
+        <div class="quiz-feedback">✅ CO₂ = 1C + 2O = 12 + 2(16) = 12 + 32 = 44 u. Carbon dioxide has a molecular mass of
+          44 u.</div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-text">3. How many atoms are present in 1 mole of any element?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">6.022 × 10²¹</button>
+          <button class="quiz-opt">3.011 × 10²³</button>
+          <button class="quiz-opt" data-correct="true">6.022 × 10²³</button>
+          <button class="quiz-opt">1.204 × 10²⁴</button>
+        </div>
+        <div class="quiz-feedback">✅ Avogadro's number = 6.022 × 10²³. This is the number of particles in one mole of
+          any substance.</div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-text">4. What is the valency of Aluminium (Al)?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt">1</button>
+          <button class="quiz-opt">2</button>
+          <button class="quiz-opt" data-correct="true">3</button>
+          <button class="quiz-opt">4</button>
+        </div>
+        <div class="quiz-feedback">✅ Aluminium has 3 electrons in its outermost shell, so its valency is 3. Hence it
+          forms Al³⁺ ions.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap;margin-top:2rem">
+      <a href="chapter2.html" class="btn-secondary">← Chapter 2: Pure Substances</a>
+      <a href="chapter4.html" class="btn-primary">Chapter 4: Atomic Structure →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="chapter1.html">Chapter 1</a><a href="chapter2.html">Chapter 2</a><a
+        href="chapter3.html">Chapter 3</a><a href="chapter4.html">Chapter 4</a>
+    </div>
+    <p>© 2025 Science Beyond Books· NCERT Class 9 Chemistry · Made with ❤️ for students</p>
+    <p>It is a non-profit work</p>
+  </footer>
+  <script>
+    window.addEventListener('scroll', () => { const s = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100; const f = document.querySelector('.progress-fill'); if (f) f.style.width = s + '%'; });
+    const hb = document.querySelector('.hamburger'), nl = document.querySelector('.nav-links');
+    if (hb) hb.addEventListener('click', () => nl.classList.toggle('open'));
+    document.querySelectorAll('.quiz-opt').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const q = this.closest('.quiz-q'); if (q.dataset.answered) return; q.dataset.answered = true;
+        const ok = this.dataset.correct === 'true';
+        this.classList.add(ok ? 'correct' : 'wrong');
+        if (!ok) q.querySelector('[data-correct="true"]').classList.add('correct');
+        const fb = q.querySelector('.quiz-feedback'); if (fb) fb.classList.add('show');
+      });
+    });
+  </script>
+</body>
+
+</html>
